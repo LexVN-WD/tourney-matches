@@ -2,8 +2,8 @@ export const preparePlayerData = (playerData) => {
  return Object.values(playerData);
 }
 
-export const addWinsToPlayers = (playerDataArr, matchData) => {
-  return playerDataArr.map(player => {
+export const addWinsToPlayers = (playerDataArray, matchData) => {
+  return playerDataArray.map(player => {
     const currentWins = matchData.reduce((accumulator, match) => {
       if (match.winner === player.gamerTag) {
         return accumulator += 1;
@@ -13,5 +13,7 @@ export const addWinsToPlayers = (playerDataArr, matchData) => {
     }, 0);
 
     player.wins = currentWins;
+
+    return player;
   });
-}
+};
