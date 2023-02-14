@@ -1,5 +1,3 @@
-
-
 function Match(props){
 
   return (
